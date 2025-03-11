@@ -1,0 +1,12 @@
+apiVersion: scheduling.kubestellar.io/v1alpha1
+kind: WorkspacePlacementPolicy
+metadata:
+  name: nginx-workspace-policy
+  namespace: default
+spec:
+  workspaceSelector:
+    matchLabels:
+      env: production
+  deploymentTargetSelector:
+    matchLabels:
+      region: us-west

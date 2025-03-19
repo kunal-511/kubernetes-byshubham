@@ -1,0 +1,10 @@
+kind: DevOpsBatch
+apiVersion: trainwithkunal.com/v1
+metadata:
+  name: devopsbatch-sample
+spec:
+  name: devops-sample-batch
+  duration: 3 months
+  platform: kubernetes
+  mode: live
+  

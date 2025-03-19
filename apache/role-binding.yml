@@ -11,3 +11,4 @@ roleRef:
   kind: Role
   name: apache-manager
   apiGroup: rbac.authorization.k8s.io
+  #role biniding

@@ -1,0 +1,52 @@
+# Kubernetes and Istio config files
+*.yaml
+!kustomization.yaml  # Allow kustomization.yaml if using Kustomize
+!*.example.yaml  # Keep example YAML files
+
+# Helm charts and generated templates
+charts/
+templates/
+*.tgz
+helm-values*.yaml
+
+# Istio related cache and logs
+istio-*
+.env
+*.log
+*.out
+
+# Config files
+config/
+secrets/
+*.env
+*.crt
+*.key
+*.pem
+*.jks
+
+# Binaries
+bin/
+*.exe
+*.out
+*.o
+*.so
+*.a
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Python virtual environments
+venv/
+.env/
+
+# Node modules (if frontend is included)
+node_modules/
+
+# Golang build files (if applicable)
+*.mod
+*.sum
+go.sum
+vendor/
+

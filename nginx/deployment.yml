@@ -1,21 +1,28 @@
-kind: Deployment
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx
+---
 apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: nginx
+  labels:
+    kubernetes.io/kubestellar.workload.name: nginx
 spec:
-  replicas: 2  
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
   template:
-    metadata: 
-      name: nginx-dep-pod
+    metadata:
       labels:
         app: nginx
     spec:
       containers:
-        - name: nginx
-          image: nginx:latest
-          ports:
-            - containerPort: 80
+      - name: nginx
+        image: public.ecr.aws/nginx/nginx:latest
+        ports:
+        - containerPort: 80
+

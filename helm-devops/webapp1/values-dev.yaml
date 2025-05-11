@@ -1,0 +1,6 @@
+namespace: dev
+
+configmap:
+  data:
+    CUSTOM_HEADER: "This app was deployed using Helm in dev mode"
+
